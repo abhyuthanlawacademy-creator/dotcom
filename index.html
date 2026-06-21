@@ -3,24 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abhyuthan Law Academy — Judicial Services Coaching, Jaipur</title>
-<meta name="description" content="Abhyuthan Law Academy, Jaipur — coaching for RJS, APO and the judicial services of Rajasthan and beyond. Hybrid classes, a faculty of practitioners, and a full test series.">
+<title>Abhyuthan Law Academy — Judicial Services Coaching, India</title>
+<meta name="description" content="Abhyuthan Law Academy, Premier coaching for RJS, APO and the judicial services of Rajasthan and beyond. Hybrid classes, a faculty of practitioners, and a full test series.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --oxblood:#6B1F2A;
-    --oxblood-deep:#4E1620;
-    --ink:#211B16;
-    --ink-soft:#4A4138;
-    --parchment:#ECE3D0;
-    --parchment-lt:#F4EEE0;
-    --parchment-hi:#FBF7EC;
-    --brass:#A77B33;
-    --brass-hi:#C49A4A;
-    --rule:rgba(33,27,22,.18);
-    --rule-light:rgba(244,238,224,.28);
+    /* Navy + Gold — judicial / institutional trust palette */
+    --oxblood:#16243F;        /* judicial navy (brand / hero / footer) */
+    --oxblood-deep:#0F1A30;   /* deeper navy */
+    --ink:#1A1D24;            /* near-black ink (dark sections + text) */
+    --ink-soft:#525864;       /* muted slate for secondary text */
+    --parchment:#F1EFE8;      /* soft warm off-white page background */
+    --parchment-lt:#FAF8F2;   /* brighter banded sections / cards */
+    --parchment-hi:#FCFBF7;   /* near-white text on dark grounds */
+    --brass:#A6843A;          /* gold */
+    --brass-hi:#C49A4A;       /* bright gold accent */
+    --rule:rgba(26,29,36,.15);
+    --rule-light:rgba(252,251,247,.26);
     --display:"Fraunces",Georgia,"Times New Roman",serif;
     --body:"Spectral",Georgia,serif;
     --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
@@ -155,6 +156,24 @@
   .states{display:flex;flex-wrap:wrap;gap:.5rem}
   .state{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--brass);padding-bottom:2px}
 
+  /* ---- toppers' wall ---- */
+  .toppers-wall{margin-top:clamp(2.6rem,6vw,4.5rem);padding-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--rule)}
+  .tw-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem}
+  .tw-head .mono{color:var(--brass)!important}
+  .tw-cap{margin:0;font-style:italic;font-weight:300;color:var(--ink-soft);font-size:clamp(1rem,.9rem + .4vw,1.18rem);max-width:46ch}
+  .tw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:clamp(.9rem,2vw,1.4rem)}
+  .tw-card{margin:0;background:var(--parchment-lt);border:1px solid var(--rule);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .tw-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(22,36,63,.14);border-color:var(--brass)}
+  .tw-portrait{aspect-ratio:4/5;background:linear-gradient(158deg,var(--oxblood),var(--oxblood-deep));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .tw-portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 85% at 50% -15%,rgba(196,154,74,.22),transparent 62%);pointer-events:none}
+  .tw-portrait::before{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--brass-hi);opacity:.85}
+  .tw-mono{font-family:var(--display);font-weight:500;font-size:2.4rem;letter-spacing:.03em;color:var(--brass-hi);opacity:.92}
+  .tw-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tw-body{padding:.85rem .95rem 1.05rem}
+  .tw-name{font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.1;margin:0 0 .35rem;letter-spacing:-.01em}
+  .tw-rank{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin:0;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+  .tw-rank b{color:var(--oxblood);font-weight:700;white-space:nowrap}
+
   /* ---- bench / faculty ---- */
   .bench{background:var(--parchment-lt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .bench-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
@@ -163,6 +182,17 @@
   .bench-points li{padding:.85rem 0;border-bottom:1px solid var(--rule);display:flex;gap:.9rem;align-items:baseline}
   .bench-points li:last-child{border-bottom:0}
   .bench-points .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);min-width:3ch}
+
+  /* ---- director's note ---- */
+  .director{display:grid;grid-template-columns:minmax(0,280px) 1fr;gap:clamp(1.6rem,4vw,3.5rem);align-items:center;margin-bottom:clamp(2.4rem,5vw,3.6rem);padding-bottom:clamp(2.4rem,5vw,3.6rem);border-bottom:1px solid var(--rule)}
+  .director-photo{aspect-ratio:4/5;position:relative;overflow:hidden;border:1px solid var(--rule);background:linear-gradient(158deg,var(--oxblood),var(--oxblood-deep));display:flex;align-items:center;justify-content:center}
+  .director-photo::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 85% at 50% -15%,rgba(196,154,74,.22),transparent 62%);pointer-events:none}
+  .director-photo::before{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--brass-hi);opacity:.85}
+  .director-eyebrow{font-family:var(--mono);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;color:var(--brass)}
+  .director-note{font-family:var(--display);font-weight:400;font-style:italic;font-size:clamp(1.3rem,1.05rem + 1.3vw,1.95rem);line-height:1.36;letter-spacing:-.01em;margin:.9rem 0 1.5rem;color:var(--ink);max-width:42ch}
+  .director-note::before{content:"“";color:var(--brass);font-style:normal;line-height:0;vertical-align:-.25em;margin-right:.05em}
+  .director-name{font-family:var(--display);font-weight:500;font-size:1.3rem;color:var(--oxblood);margin:0;letter-spacing:-.01em}
+  .director-title{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:.3rem 0 0}
 
   /* ---- opinions / testimonials ---- */
   .op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,3vw,2.2rem)}
@@ -207,6 +237,8 @@
   /* ---- responsive ---- */
   @media(max-width:960px){
     .headnote-grid,.results-grid,.bench-grid{grid-template-columns:1fr}
+    .director{grid-template-columns:1fr;justify-items:start}
+    .director-photo{max-width:240px}
     .synopsis{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:1.4rem}
     .method-grid,.op-grid,.reg-grid{grid-template-columns:1fr 1fr}
     .foot-top{grid-template-columns:1fr 1fr}
@@ -241,7 +273,7 @@
         <path d="M29 13 L25 21 a4 4 0 0 0 8 0 Z"/>
         <line x1="15" y1="31" x2="25" y2="31"/>
       </svg>
-      <span><b>Abhyuthan</b><small>Law Academy · Jaipur</small></span>
+      <span><b>Abhyuthan</b><small>Law Academy · India</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Primary">
       <a href="#headnote">About</a>
@@ -265,7 +297,7 @@
 
       <div class="cover-top">
         <span>Judicial Services Coaching</span>
-        <span>Gopalpura Bypass · Jaipur · Raj.</span>
+        <span>Online · All India</span>
       </div>
 
       <p class="gloss"><span class="sa">अभ्युत्थान</span> abhyuthan, n. — a rising; the act of elevation to a higher station.</p>
@@ -275,11 +307,11 @@
 
       <p class="lede">Coaching for RJS, APO and the judicial services of Rajasthan and beyond — read closely, tested often, and taught by people who sit the same exams they prepare you for.</p>
 
-      <p class="citation">RJS · APO · ADJ · JLO · HP Judiciary · CLAT</p>
+      <p class="citation">RJS · GJS · APO · ADJ · JLO · HP Judiciary · CLAT</p>
 
       <div class="cta-row">
-        <a class="btn btn-solid" href="#contact">Enquire about the January cohort →</a>
-        <a class="btn btn-ghost" href="#registry">Download RJS Syllabus 2025</a>
+        <a class="btn btn-solid" href="#contact">Enquire about the latest cohort →</a>
+        <a class="btn btn-ghost" href="#registry">Download RJS Syllabus </a>
       </div>
     </div>
   </div>
@@ -295,8 +327,8 @@
     </div>
     <div class="headnote-grid">
       <div class="hn-body reveal">
-        <p class="drop">Abhyuthan Law Academy prepares graduates for the judicial-services entrance examinations of Rajasthan and other states. Instruction is hybrid — attend in our Gopalpura classroom or join the same lecture online — and is delivered by examiners, prosecutors and law faculty with eight years and more at the work.</p>
-        <p class="marginal" style="margin-top:1.6rem">cf. The method is unhurried and complete: the full syllabus, read closely, and tested often enough that the exam hall feels like a Tuesday.</p>
+        <p class="drop">Abhyuthan Law Academy prepares graduates for the judicial-services entrance examinations of Rajasthan and other states. Instruction is hybrid — attend in our Live classroom programme or study via recorded lectures — and is delivered by examiners, prosecutors and law faculty with eight years and more at the work.</p>
+        <p class="marginal" style="margin-top:1.6rem">cf. Wholly online now — the same close reading and the same test series, wherever in India you sit.</p>
       </div>
       <div class="synopsis reveal">
         <div class="syn-item"><span class="syn-num" data-count="1000" data-suffix="+">0</span><span class="syn-label">candidates<br>selected to date</span></div>
@@ -322,17 +354,30 @@
       <div>
         <h3 class="course-title">RJS Foundation</h3>
         <p class="course-sub">Rajasthan Judicial Services · Prelims to Viva</p>
-        <p class="course-desc">The full preparation, from a standing start to the interview board. Every one of the eighteen subjects taught in sequence, with the test series running alongside from the first month.</p>
+        <p class="course-desc">The full preparation, from a standing start to the interview board. Every one of the 32 subjects taught in sequence, with the test series running alongside from the first month.</p>
       </div>
       <div class="course-meta">
         <span class="meta-pair"><b>15 mo.</b>duration</span>
-        <span class="meta-pair"><b>18</b>subjects</span>
-        <span class="meta-pair"><b>60+</b>offline tests</span>
+        <span class="meta-pair"><b>32</b>subjects</span>
+        <span class="meta-pair"><b>60+</b>Online tests</span>
+      </div>
+    </div>
+    <div class="course reveal">
+      <div class="course-mark">B.</div>
+      <div>
+        <h3 class="course-title">GJS Foundation</h3>
+        <p class="course-sub">Gujarat Judicial Services · Prelims to Personal Interview</p>
+        <p class="course-desc">The full preparation, from a standing start to the interview board. Every one of the eighteen-plus subjects taught in sequence, with the test series running alongside from the first month.</p>
+      </div>
+      <div class="course-meta">
+        <span class="meta-pair"><b>15 mo.</b>duration</span>
+        <span class="meta-pair"><b>18+</b>subjects</span>
+        <span class="meta-pair"><b>60+</b>Online tests</span>
       </div>
     </div>
 
     <div class="course reveal">
-      <div class="course-mark">B.</div>
+      <div class="course-mark">C.</div>
       <div>
         <h3 class="course-title">APO Programme</h3>
         <p class="course-sub">Assistant Prosecution Officer</p>
@@ -346,7 +391,7 @@
     </div>
 
     <div class="course reveal">
-      <div class="course-mark">C.</div>
+      <div class="course-mark">D.</div>
       <div>
         <h3 class="course-title">ADJ &amp; JLO</h3>
         <p class="course-sub">For practising advocates &amp; legal officers</p>
@@ -376,7 +421,7 @@
       <span class="sec-aside">What a week looks like</span>
     </div>
     <div class="method-grid">
-      <div class="m-cell reveal"><span class="num">i.</span><h3>Hybrid attendance</h3><p>Sit in the Gopalpura classroom or join the identical live lecture from home. Recordings stay with you for revision.</p></div>
+      <div class="m-cell reveal"><span class="num">i.</span><h3>Learn from anywhere</h3><p>Join the live class from anywhere in India, or study the recording on your own schedule. Recordings stay with you for revision.</p></div>
       <div class="m-cell reveal"><span class="num">ii.</span><h3>Live, not pre-canned</h3><p>Interactive classes where questions are answered as they arise — never a playlist you watch alone.</p></div>
       <div class="m-cell reveal"><span class="num">iii.</span><h3>One-to-one doubt sittings</h3><p>Booked time with the teacher who took the lecture, so nothing is carried unresolved into the next topic.</p></div>
       <div class="m-cell reveal"><span class="num">iv.</span><h3>The test series</h3><p>Sixty-plus tests and full mocks each cycle, marked the way the board marks — answer-writing is a trained skill here.</p></div>
@@ -408,6 +453,86 @@
         </div>
       </div>
     </div>
+
+    <!-- ============ TOPPERS' WALL ============
+         EACH CARD ALREADY HAS AN <img> WIRED IN. To show a real photo,
+         just drop a file named after the student into images/toppers/
+         (e.g. images/toppers/priyanka-sharma.jpg). No HTML editing needed.
+         The exact filename each card expects is in its img src below.
+         Until a matching file exists, the gold monogram shows as a fallback.
+         Use portrait-orientation images (4:5, ~800x1000px) for a clean fit. -->
+    <div class="toppers-wall reveal">
+      <div class="tw-head">
+        <span class="mono">§ 4.1 — Toppers' Wall</span>
+        <p class="tw-cap">The faces behind the number — a selection of recent results across RJS and APO.</p>
+      </div>
+      <div class="tw-grid">
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/priyanka-sharma.jpg" alt="Priyanka Sharma — RJS 2024 Rank 7" loading="lazy" onerror="this.remove()"><span class="tw-mono">PS</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Priyanka Sharma</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 7</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/aman-verma.jpg" alt="Aman Verma — APO 2024 Rank 3" loading="lazy" onerror="this.remove()"><span class="tw-mono">AV</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Aman Verma</p><p class="tw-rank"><span>APO 2024</span><b>Rank 3</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/rahul-meena.jpg" alt="Rahul Meena — RJS 2024 Rank 14" loading="lazy" onerror="this.remove()"><span class="tw-mono">RM</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Rahul Meena</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 14</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/sneha-joshi.jpg" alt="Sneha Joshi — APO 2023 Rank 9" loading="lazy" onerror="this.remove()"><span class="tw-mono">SJ</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Sneha Joshi</p><p class="tw-rank"><span>APO 2023</span><b>Rank 9</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/vikram-singh.jpg" alt="Vikram Singh — RJS 2024 Rank 31" loading="lazy" onerror="this.remove()"><span class="tw-mono">VS</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Vikram Singh</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 31</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/neha-gupta.jpg" alt="Neha Gupta — RJS 2023 Rank 21" loading="lazy" onerror="this.remove()"><span class="tw-mono">NG</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Neha Gupta</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 21</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/karan-yadav.jpg" alt="Karan Yadav — RJS 2023 Rank 18" loading="lazy" onerror="this.remove()"><span class="tw-mono">KY</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Karan Yadav</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 18</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/divya-rathore.jpg" alt="Divya Rathore — RJS 2024 Rank 25" loading="lazy" onerror="this.remove()"><span class="tw-mono">DR</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Divya Rathore</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 25</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/manish-choudhary.jpg" alt="Manish Choudhary — RJS 2023 Rank 12" loading="lazy" onerror="this.remove()"><span class="tw-mono">MC</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Manish Choudhary</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 12</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/pooja-agarwal.jpg" alt="Pooja Agarwal — APO 2024 Rank 6" loading="lazy" onerror="this.remove()"><span class="tw-mono">PA</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Pooja Agarwal</p><p class="tw-rank"><span>APO 2024</span><b>Rank 6</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/rohit-saini.jpg" alt="Rohit Saini — RJS 2024 Rank 40" loading="lazy" onerror="this.remove()"><span class="tw-mono">RS</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Rohit Saini</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 40</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/anjali-sharma.jpg" alt="Anjali Sharma — RJS 2023 Rank 28" loading="lazy" onerror="this.remove()"><span class="tw-mono">AS</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Anjali Sharma</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 28</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/deepak-jangid.jpg" alt="Deepak Jangid — APO 2023 Rank 15" loading="lazy" onerror="this.remove()"><span class="tw-mono">DJ</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Deepak Jangid</p><p class="tw-rank"><span>APO 2023</span><b>Rank 15</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/kavita-meena.jpg" alt="Kavita Meena — RJS 2024 Rank 19" loading="lazy" onerror="this.remove()"><span class="tw-mono">KM</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Kavita Meena</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 19</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/sahil-khan.jpg" alt="Sahil Khan — RJS 2023 Rank 33" loading="lazy" onerror="this.remove()"><span class="tw-mono">SK</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Sahil Khan</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 33</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><img class="tw-img" src="images/toppers/ritu-bishnoi.jpg" alt="Ritu Bishnoi — APO 2024 Rank 11" loading="lazy" onerror="this.remove()"><span class="tw-mono">RB</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Ritu Bishnoi</p><p class="tw-rank"><span>APO 2024</span><b>Rank 11</b></p></figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -419,6 +544,23 @@
       <h2 class="sec-title">Who teaches you</h2>
       <span class="sec-aside">Faculty</span>
     </div>
+
+    <!-- DIRECTOR PHOTO: drop a portrait named images/director.jpg into the
+         images/ folder (4:5, ~800x1000px). Until then the monogram shows.
+         Replace the name and title below with the real director's details. -->
+    <div class="director reveal">
+      <div class="director-photo">
+        <img class="tw-img" src="images/director.jpg" alt="Founder & Director, Abhyuthan Law Academy" loading="lazy" onerror="this.remove()">
+        <span class="tw-mono">AD</span>
+      </div>
+      <div>
+        <p class="director-eyebrow">Director's Note</p>
+        <p class="director-note">We built Abhyuthan for one thing — to put serious aspirants on the bench. The syllabus is finite; what separates candidates is how closely it is read and how often it is tested. That is the whole of our method.</p>
+        <p class="director-name">[ Director's Name ]</p>
+        <p class="director-title">Founder &amp; Director</p>
+      </div>
+    </div>
+
     <div class="bench-grid">
       <p class="bench-lead reveal">Taught by judicial-services rankers, prosecutors and law faculty — the same teachers from your first lecture to your final viva.</p>
       <ul class="bench-points reveal">
@@ -442,7 +584,7 @@
     <div class="op-grid">
       <div class="op reveal">
         <blockquote>The test series is the whole game. By the prelims I had written the paper so many times that the real one felt routine.</blockquote>
-        <cite><b>Priya — RJS, selected</b>Jaipur cohort</cite>
+        <cite><b>Priya — RJS, selected</b>Online cohort</cite>
       </div>
       <div class="op reveal">
         <blockquote>I joined online from another state and never felt outside the room. The doubt sittings were one-to-one, exactly as promised.</blockquote>
@@ -493,7 +635,7 @@
     <div class="foot-top">
       <div class="reveal">
         <h2>Sit the next <em>cohort.</em></h2>
-        <p class="lede">The next batch begins 20 January. Call or write, and we will walk you through the course that fits your exam and your start date.</p>
+        <p class="lede">For next batch enquiry, call or write, and we will walk you through the course that fits your exam and your start date.</p>
         <a class="btn btn-solid" href="tel:+917976734810">Call +91 79767 34810</a>
       </div>
       <div class="foot-col reveal">
@@ -501,16 +643,15 @@
         <a href="tel:+917976734810">+91 79767 34810</a>
         <a href="tel:+918290240085">+91 82902 40085</a>
         <a href="mailto:abhyuthanlawacademy@gmail.com">abhyuthanlawacademy@gmail.com</a>
-        <p>New batch · 20 January</p>
+        <p>Connect for new Batch Enquiry</p>
       </div>
       <div class="foot-col reveal">
-        <h4>The classroom</h4>
-        <p>Plot No. 6, Gopalpura Bypass Rd,<br>near Triveni Puliya, Gopal Nagar-A,<br>Agrasen Nagar, Jaipur,<br>Rajasthan 302018</p>
-        <a href="https://maps.google.com/?q=Abhyuthan+Law+Academy+Gopalpura+Jaipur" target="_blank" rel="noopener">View on map →</a>
-      </div>
+        <h4>Online classroom</h4>
+        <p>We have completely moved to Online platform<br></p>
+         </div>
     </div>
     <div class="foot-bar">
-      <span class="mono">© 2026 Abhyuthan Law Academy · Best Judiciary Coaching in Jaipur</span>
+      <span class="mono">© 2026 Abhyuthan Law Academy · Best Judiciary Coaching in India</span>
       <nav class="socials" aria-label="Social media">
         <a href="#">YouTube</a><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">LinkedIn</a><a href="#">Play Store</a>
       </nav>
