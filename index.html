@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhyuthan Law Academy — Judicial Services Coaching, Jaipur</title>
+<meta name="description" content="Abhyuthan Law Academy, Jaipur — coaching for RJS, APO and the judicial services of Rajasthan and beyond. Hybrid classes, a faculty of practitioners, and a full test series.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Navy + Gold — judicial / institutional trust palette */
+    --oxblood:#16243F;        /* judicial navy (brand / hero / footer) */
+    --oxblood-deep:#0F1A30;   /* deeper navy */
+    --ink:#1A1D24;            /* near-black ink (dark sections + text) */
+    --ink-soft:#525864;       /* muted slate for secondary text */
+    --parchment:#F1EFE8;      /* soft warm off-white page background */
+    --parchment-lt:#FAF8F2;   /* brighter banded sections / cards */
+    --parchment-hi:#FCFBF7;   /* near-white text on dark grounds */
+    --brass:#A6843A;          /* gold */
+    --brass-hi:#C49A4A;       /* bright gold accent */
+    --rule:rgba(26,29,36,.15);
+    --rule-light:rgba(252,251,247,.26);
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --body:"Spectral",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:var(--body);
+    font-weight:400;
+    font-size:clamp(1rem,.95rem + .25vw,1.1rem);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  ::selection{background:var(--brass);color:var(--parchment-hi)}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+  .band{padding:clamp(3.75rem,8vw,7rem) 0}
+
+  /* ---- shared type ---- */
+  .mono{font-family:var(--mono);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem}
+  .eyebrow{font-family:var(--mono);font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:.7rem;color:var(--oxblood)}
+  .eyebrow.on-dark{color:var(--brass-hi)}
+  .display{font-family:var(--display);font-weight:400;line-height:1.04;letter-spacing:-.015em}
+
+  .sec-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem;padding-bottom:1.1rem;border-bottom:1px solid var(--rule)}
+  .sec-tag{font-family:var(--mono);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--oxblood)}
+  .sec-title{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,1.4rem + 2.4vw,3.1rem);line-height:1.05;letter-spacing:-.02em;margin:0;flex:1 1 320px}
+  .sec-aside{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right}
+
+  /* ---- court seal mark ---- */
+  .seal{width:34px;height:34px;flex:none}
+  .seal circle,.seal line,.seal path{stroke:currentColor;fill:none;stroke-width:1.4;vector-effect:non-scaling-stroke}
+
+  /* ---- topbar ---- */
+  .topbar{position:sticky;top:0;z-index:60;background:var(--oxblood);color:var(--parchment-hi);border-bottom:1px solid rgba(199,154,74,.4)}
+  .topbar .wrap{display:flex;align-items:center;gap:1.4rem;min-height:64px}
+  .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit;flex:none}
+  .brand .seal{color:var(--brass-hi)}
+  .brand b{font-family:var(--display);font-weight:500;font-size:1.18rem;letter-spacing:.01em;line-height:1}
+  .brand small{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-hi);margin-top:3px}
+  .nav{display:flex;gap:1.6rem;margin-left:auto;align-items:center}
+  .nav a{font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;text-decoration:none;color:var(--parchment-hi);opacity:.85;padding:.4rem 0;position:relative}
+  .nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--brass-hi);transition:right .3s ease}
+  .nav a:hover,.nav a:focus-visible{opacity:1}
+  .nav a:hover::after,.nav a:focus-visible::after{right:0}
+  .top-cta{font-family:var(--mono);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.66rem;text-decoration:none;border:1px solid var(--brass-hi);color:var(--parchment-hi);padding:.6rem .95rem;white-space:nowrap;transition:background .25s,color .25s}
+  .top-cta:hover,.top-cta:focus-visible{background:var(--brass-hi);color:var(--oxblood-deep)}
+  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--brass-hi);color:var(--parchment-hi);font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .75rem;cursor:pointer}
+
+  /* ---- hero / law-report cover ---- */
+  .hero{background:var(--oxblood);color:var(--parchment-hi);position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+     radial-gradient(120% 90% at 85% -10%,rgba(199,154,74,.16),transparent 55%),
+     radial-gradient(90% 70% at -5% 110%,rgba(0,0,0,.35),transparent 60%);pointer-events:none}
+  .cover{position:relative;margin:clamp(1.1rem,3vw,2.2rem) 0;border:1px solid rgba(199,154,74,.5);padding:clamp(2.2rem,6vw,4.6rem) clamp(1.4rem,5vw,3.6rem)}
+  .cover::before{content:"";position:absolute;inset:7px;border:1px solid rgba(199,154,74,.22);pointer-events:none}
+  .corner{position:absolute;width:16px;height:16px;border:1px solid var(--brass-hi);opacity:.8}
+  .corner.tl{top:-1px;left:-1px;border-right:0;border-bottom:0}
+  .corner.tr{top:-1px;right:-1px;border-left:0;border-bottom:0}
+  .corner.bl{bottom:-1px;left:-1px;border-right:0;border-top:0}
+  .corner.br{bottom:-1px;right:-1px;border-left:0;border-top:0}
+
+  .cover-top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-hi);margin-bottom:clamp(1.6rem,4vw,2.6rem)}
+  .gloss{font-family:var(--body);font-style:italic;font-weight:300;font-size:clamp(1rem,.9rem + .4vw,1.18rem);color:rgba(251,247,236,.8);max-width:34ch;margin:0 0 .4rem}
+  .gloss .sa{font-family:var(--display);font-style:normal;font-weight:500;color:var(--brass-hi);font-size:1.15em;margin-right:.5rem}
+  .masthead{font-family:var(--display);font-weight:400;font-size:clamp(3rem,2rem + 9vw,8.5rem);line-height:.92;letter-spacing:-.03em;margin:.2rem 0 .1rem;color:var(--parchment-hi)}
+  .masthead span{display:inline-block}
+  .subhead{font-family:var(--display);font-weight:400;font-style:italic;font-size:clamp(1.25rem,1rem + 1.4vw,2rem);color:var(--brass-hi);margin:.3rem 0 1.6rem;letter-spacing:-.01em}
+  .lede{max-width:54ch;font-size:clamp(1.02rem,.97rem + .3vw,1.18rem);color:rgba(251,247,236,.86);margin:0 0 2.2rem}
+  .citation{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(199,154,74,.9);border-top:1px solid rgba(199,154,74,.4);border-bottom:1px solid rgba(199,154,74,.4);padding:.8rem 0;margin-bottom:2.2rem}
+  .cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn{font-family:var(--mono);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;text-decoration:none;padding:.95rem 1.5rem;display:inline-flex;align-items:center;gap:.6rem;transition:transform .2s,background .25s,color .25s,box-shadow .25s}
+  .btn-solid{background:var(--brass-hi);color:var(--oxblood-deep);border:1px solid var(--brass-hi)}
+  .btn-solid:hover,.btn-solid:focus-visible{background:var(--parchment-hi);border-color:var(--parchment-hi);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--parchment-hi);border:1px solid rgba(199,154,74,.55)}
+  .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--brass-hi);background:rgba(199,154,74,.12);transform:translateY(-2px)}
+
+  /* ---- headnote ---- */
+  .headnote{background:var(--parchment-lt);border-bottom:1px solid var(--rule)}
+  .headnote-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+  .hn-body p{font-size:clamp(1.12rem,1rem + .6vw,1.45rem);line-height:1.5;font-weight:300;margin:.4rem 0 0;max-width:40ch}
+  .hn-body .drop::first-letter{initial-letter:2.4;-webkit-initial-letter:2.4;font-family:var(--display);font-weight:500;color:var(--oxblood);margin-right:.6rem}
+  .marginal{font-family:var(--mono);font-size:.66rem;line-height:1.7;letter-spacing:.04em;color:var(--ink-soft);text-transform:none}
+  .synopsis{border-left:1px solid var(--rule);padding-left:clamp(1.4rem,3vw,2.4rem)}
+  .syn-item{padding:.95rem 0;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:1rem}
+  .syn-item:first-child{padding-top:0}
+  .syn-item:last-child{border-bottom:0}
+  .syn-num{font-family:var(--display);font-weight:500;font-size:clamp(2rem,1.4rem + 2vw,2.9rem);color:var(--oxblood);line-height:1;min-width:3.4ch}
+  .syn-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---- cause list / courses ---- */
+  .course{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1rem,4vw,3rem);align-items:start;padding:clamp(1.6rem,4vw,2.6rem) 0;border-top:1px solid var(--rule);transition:background .3s}
+  .course:last-of-type{border-bottom:1px solid var(--rule)}
+  .course:hover{background:var(--parchment-lt)}
+  .course-mark{font-family:var(--mono);font-weight:700;font-size:.82rem;letter-spacing:.06em;color:var(--brass);padding-top:.5rem}
+  .course-title{font-family:var(--display);font-weight:500;font-size:clamp(1.5rem,1.1rem + 1.8vw,2.4rem);line-height:1.05;margin:0 0 .35rem;letter-spacing:-.015em}
+  .course-sub{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--oxblood);margin-bottom:.7rem}
+  .course-desc{max-width:48ch;color:var(--ink-soft);margin:0}
+  .course-meta{display:flex;flex-direction:column;gap:.55rem;text-align:right;min-width:130px}
+  .meta-pair{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+  .meta-pair b{display:block;font-family:var(--display);font-weight:500;font-size:1.35rem;letter-spacing:0;color:var(--oxblood);text-transform:none}
+  .allied{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+  .allied .lab{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-right:.4rem}
+  .pill{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--rule);padding:.45rem .8rem;color:var(--ink)}
+
+  /* ---- method ---- */
+  .method{background:var(--ink);color:var(--parchment-hi)}
+  .method .sec-head{border-color:var(--rule-light)}
+  .method .sec-tag{color:var(--brass-hi)}
+  .method .sec-aside{color:rgba(251,247,236,.5)}
+  .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-light);border:1px solid var(--rule-light)}
+  .m-cell{background:var(--ink);padding:clamp(1.6rem,3vw,2.3rem)}
+  .m-cell .num{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--brass-hi);display:block;margin-bottom:1rem}
+  .m-cell h3{font-family:var(--display);font-weight:500;font-size:1.32rem;margin:0 0 .5rem;letter-spacing:-.01em}
+  .m-cell p{margin:0;color:rgba(251,247,236,.72);font-size:.98rem;font-weight:300}
+
+  /* ---- results ---- */
+  .results .sec-head{border-color:var(--rule)}
+  .results-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+  .bignum{font-family:var(--display);font-weight:400;font-size:clamp(5rem,3rem + 14vw,12rem);line-height:.85;color:var(--oxblood);letter-spacing:-.04em}
+  .bignum sup{font-size:.32em;vertical-align:super;color:var(--brass)}
+  .bignum-cap{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:.4rem}
+  .results-note{font-size:clamp(1.05rem,.95rem + .5vw,1.3rem);font-weight:300;line-height:1.5;max-width:42ch;margin:0 0 1.6rem}
+  .states{display:flex;flex-wrap:wrap;gap:.5rem}
+  .state{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--brass);padding-bottom:2px}
+
+  /* ---- bench / faculty ---- */
+  .bench{background:var(--parchment-lt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .bench-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+  .bench-lead{font-family:var(--display);font-weight:400;font-style:italic;font-size:clamp(1.4rem,1.1rem + 1.4vw,2.1rem);line-height:1.3;letter-spacing:-.01em;margin:0}
+  .bench-points{list-style:none;margin:0;padding:0}
+  .bench-points li{padding:.85rem 0;border-bottom:1px solid var(--rule);display:flex;gap:.9rem;align-items:baseline}
+  .bench-points li:last-child{border-bottom:0}
+  .bench-points .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);min-width:3ch}
+
+  /* ---- opinions / testimonials ---- */
+  .op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,3vw,2.2rem)}
+  .op{border-top:2px solid var(--oxblood);padding-top:1.4rem}
+  .op blockquote{font-family:var(--display);font-weight:400;font-size:clamp(1.1rem,1rem + .5vw,1.3rem);line-height:1.4;letter-spacing:-.01em;margin:0 0 1.3rem;color:var(--ink)}
+  .op blockquote::before{content:"“";color:var(--brass);font-size:1.4em;line-height:0;vertical-align:-.2em}
+  .op cite{font-style:normal;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:block}
+  .op cite b{display:block;color:var(--oxblood);font-weight:700;margin-bottom:2px}
+
+  /* ---- registry / resources ---- */
+  .registry{background:var(--ink);color:var(--parchment-hi)}
+  .registry .sec-head{border-color:var(--rule-light)}
+  .registry .sec-tag{color:var(--brass-hi)}
+  .registry .sec-aside{color:rgba(251,247,236,.5)}
+  .reg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .reg-card{border:1px solid var(--rule-light);padding:clamp(1.5rem,3vw,2.1rem);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:.6rem;transition:background .25s,border-color .25s,transform .2s}
+  .reg-card:hover,.reg-card:focus-visible{background:rgba(199,154,74,.08);border-color:var(--brass-hi);transform:translateY(-3px)}
+  .reg-kind{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-hi)}
+  .reg-card h3{font-family:var(--display);font-weight:500;font-size:1.45rem;margin:0;letter-spacing:-.01em}
+  .reg-card p{margin:0;color:rgba(251,247,236,.7);font-weight:300;font-size:.95rem}
+  .reg-card .go{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-hi);margin-top:auto}
+
+  /* ---- footer / nameplate ---- */
+  .foot{background:var(--oxblood);color:var(--parchment-hi)}
+  .foot-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);padding:clamp(3.5rem,7vw,6rem) 0 clamp(2.5rem,5vw,3.5rem)}
+  .foot h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,1.4rem + 3vw,3.4rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 1rem}
+  .foot h2 em{font-style:italic;color:var(--brass-hi)}
+  .foot .lede{color:rgba(251,247,236,.82);max-width:34ch;margin-bottom:1.6rem}
+  .foot-col h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-hi);margin:0 0 1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(199,154,74,.35)}
+  .foot-col a,.foot-col p{color:rgba(251,247,236,.85);text-decoration:none;display:block;margin:0 0 .7rem;font-size:.95rem;line-height:1.45}
+  .foot-col a:hover,.foot-col a:focus-visible{color:var(--brass-hi)}
+  .foot-bar{border-top:1px solid rgba(199,154,74,.35);padding:1.4rem 0 2.2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
+  .foot-bar .mono{color:rgba(251,247,236,.6);text-transform:none;letter-spacing:.06em;font-size:.66rem}
+  .socials{display:flex;gap:1.1rem}
+  .socials a{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:rgba(251,247,236,.8)}
+  .socials a:hover{color:var(--brass-hi)}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---- responsive ---- */
+  @media(max-width:960px){
+    .headnote-grid,.results-grid,.bench-grid{grid-template-columns:1fr}
+    .synopsis{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:1.4rem}
+    .method-grid,.op-grid,.reg-grid{grid-template-columns:1fr 1fr}
+    .foot-top{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    .nav,.top-cta{display:none}
+    .menu-btn{display:block}
+    .nav.open{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--oxblood-deep);border-bottom:1px solid var(--brass-hi);margin:0;padding:.5rem 0}
+    .nav.open a{padding:.85rem clamp(1.25rem,4vw,3rem);border-bottom:1px solid rgba(199,154,74,.2);font-size:.78rem}
+    .course{grid-template-columns:auto 1fr}
+    .course-meta{grid-column:2;text-align:left;flex-direction:row;gap:1.6rem;margin-top:.4rem}
+    .method-grid,.op-grid,.reg-grid,.foot-top{grid-template-columns:1fr}
+    .sec-aside{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Abhyuthan Law Academy, home">
+      <svg class="seal" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5"/>
+        <line x1="20" y1="9" x2="20" y2="31"/>
+        <line x1="11" y1="13" x2="29" y2="13"/>
+        <path d="M11 13 L7 21 a4 4 0 0 0 8 0 Z"/>
+        <path d="M29 13 L25 21 a4 4 0 0 0 8 0 Z"/>
+        <line x1="15" y1="31" x2="25" y2="31"/>
+      </svg>
+      <span><b>Abhyuthan</b><small>Law Academy · Jaipur</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#headnote">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#registry">Resources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="top-cta" href="#contact">Enquire</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="cover reveal in">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+
+      <div class="cover-top">
+        <span>Judicial Services Coaching</span>
+        <span>Gopalpura Bypass · Jaipur · Raj.</span>
+      </div>
+
+      <p class="gloss"><span class="sa">अभ्युत्थान</span> abhyuthan, n. — a rising; the act of elevation to a higher station.</p>
+
+      <h1 class="masthead" id="masthead"><span>Abhyuthan</span></h1>
+      <p class="subhead">Preparation for the bench.</p>
+
+      <p class="lede">Coaching for RJS, APO and the judicial services of Rajasthan and beyond — read closely, tested often, and taught by people who sit the same exams they prepare you for.</p>
+
+      <p class="citation">RJS · APO · ADJ · JLO · HP Judiciary · CLAT</p>
+
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#contact">Enquire about the January cohort →</a>
+        <a class="btn btn-ghost" href="#registry">Download RJS Syllabus 2025</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HEADNOTE ============ -->
+<section class="headnote band" id="headnote">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 1 — Headnote</span>
+      <h2 class="sec-title">The academy, in brief</h2>
+      <span class="sec-aside">Read this first</span>
+    </div>
+    <div class="headnote-grid">
+      <div class="hn-body reveal">
+        <p class="drop">Abhyuthan Law Academy prepares graduates for the judicial-services entrance examinations of Rajasthan and other states. Instruction is hybrid — attend in our Gopalpura classroom or join the same lecture online — and is delivered by examiners, prosecutors and law faculty with eight years and more at the work.</p>
+        <p class="marginal" style="margin-top:1.6rem">cf. The method is unhurried and complete: the full syllabus, read closely, and tested often enough that the exam hall feels like a Tuesday.</p>
+      </div>
+      <div class="synopsis reveal">
+        <div class="syn-item"><span class="syn-num" data-count="1000" data-suffix="+">0</span><span class="syn-label">candidates<br>selected to date</span></div>
+        <div class="syn-item"><span class="syn-num" data-count="8" data-suffix="+">0</span><span class="syn-label">years' experience<br>on the faculty</span></div>
+        <div class="syn-item"><span class="syn-num" data-count="60" data-suffix="+">0</span><span class="syn-label">tests &amp; mocks<br>each cycle</span></div>
+        <div class="syn-item"><span class="syn-num" data-count="8">0</span><span class="syn-label">states where our<br>students sit</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAUSE LIST / COURSES ============ -->
+<section class="courses band" id="courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 2 — The Cause List</span>
+      <h2 class="sec-title">Courses on the board</h2>
+      <span class="sec-aside">Foundation &amp; allied</span>
+    </div>
+
+    <div class="course reveal">
+      <div class="course-mark">A.</div>
+      <div>
+        <h3 class="course-title">RJS Foundation</h3>
+        <p class="course-sub">Rajasthan Judicial Services · Prelims to Viva</p>
+        <p class="course-desc">The full preparation, from a standing start to the interview board. Every one of the eighteen subjects taught in sequence, with the test series running alongside from the first month.</p>
+      </div>
+      <div class="course-meta">
+        <span class="meta-pair"><b>15 mo.</b>duration</span>
+        <span class="meta-pair"><b>18</b>subjects</span>
+        <span class="meta-pair"><b>60+</b>offline tests</span>
+      </div>
+    </div>
+
+    <div class="course reveal">
+      <div class="course-mark">B.</div>
+      <div>
+        <h3 class="course-title">APO Programme</h3>
+        <p class="course-sub">Assistant Prosecution Officer</p>
+        <p class="course-desc">A focused track for the prosecution cadre — thirty modules covering the criminal-law core and the procedure you will be examined and, later, employed on.</p>
+      </div>
+      <div class="course-meta">
+        <span class="meta-pair"><b>8 mo.</b>duration</span>
+        <span class="meta-pair"><b>30</b>modules</span>
+        <span class="meta-pair"><b>Live</b>+ online</span>
+      </div>
+    </div>
+
+    <div class="course reveal">
+      <div class="course-mark">C.</div>
+      <div>
+        <h3 class="course-title">ADJ &amp; JLO</h3>
+        <p class="course-sub">For practising advocates &amp; legal officers</p>
+        <p class="course-desc">Direct-recruitment preparation for the Additional District Judge examination and Junior Legal Officer posts, scheduled around chamber and court hours with weekend sittings.</p>
+      </div>
+      <div class="course-meta">
+        <span class="meta-pair"><b>Weekend</b>batches</span>
+        <span class="meta-pair"><b>Hybrid</b>delivery</span>
+      </div>
+    </div>
+
+    <div class="allied">
+      <span class="lab">Also on the board</span>
+      <span class="pill">HP Judiciary</span>
+      <span class="pill">UP · MP · Bihar JS</span>
+      <span class="pill">CLAT (Under-graduate)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section class="method band" id="method">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 3 — Method</span>
+      <h2 class="sec-title">How the preparation is run</h2>
+      <span class="sec-aside">What a week looks like</span>
+    </div>
+    <div class="method-grid">
+      <div class="m-cell reveal"><span class="num">i.</span><h3>Hybrid attendance</h3><p>Sit in the Gopalpura classroom or join the identical live lecture from home. Recordings stay with you for revision.</p></div>
+      <div class="m-cell reveal"><span class="num">ii.</span><h3>Live, not pre-canned</h3><p>Interactive classes where questions are answered as they arise — never a playlist you watch alone.</p></div>
+      <div class="m-cell reveal"><span class="num">iii.</span><h3>One-to-one doubt sittings</h3><p>Booked time with the teacher who took the lecture, so nothing is carried unresolved into the next topic.</p></div>
+      <div class="m-cell reveal"><span class="num">iv.</span><h3>The test series</h3><p>Sixty-plus tests and full mocks each cycle, marked the way the board marks — answer-writing is a trained skill here.</p></div>
+      <div class="m-cell reveal"><span class="num">v.</span><h3>Interview &amp; viva guidance</h3><p>Mock boards and panel practice for the stage that decides the final list, not an afterthought bolted on at the end.</p></div>
+      <div class="m-cell reveal"><span class="num">vi.</span><h3>Personal mentoring</h3><p>A schedule built to your starting point and your exam date, reviewed as you move through it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section class="results band" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 4 — Reported Results</span>
+      <h2 class="sec-title">Selections on record</h2>
+      <span class="sec-aside">RJS · APO · allied</span>
+    </div>
+    <div class="results-grid">
+      <div class="reveal">
+        <div class="bignum"><span data-count="1000">0</span><sup>+</sup></div>
+        <div class="bignum-cap">candidates selected</div>
+      </div>
+      <div class="reveal">
+        <p class="results-note">Selections recorded across RJS, APO and allied judicial services — earned by students sitting from eight states, prepared in the same classroom.</p>
+        <div class="states">
+          <span class="state">Rajasthan</span><span class="state">Gujarat</span><span class="state">Haryana</span>
+          <span class="state">Delhi</span><span class="state">Madhya Pradesh</span><span class="state">Bihar</span>
+          <span class="state">Uttar Pradesh</span><span class="state">Uttarakhand</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENCH / FACULTY ============ -->
+<section class="bench band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 5 — The Bench</span>
+      <h2 class="sec-title">Who teaches you</h2>
+      <span class="sec-aside">Faculty</span>
+    </div>
+    <div class="bench-grid">
+      <p class="bench-lead reveal">Taught by judicial-services rankers, prosecutors and law faculty — the same teachers from your first lecture to your final viva.</p>
+      <ul class="bench-points reveal">
+        <li><span class="k">a.</span><span>Eight years and more of coaching behind every core subject.</span></li>
+        <li><span class="k">b.</span><span>Small cohorts, so the teacher knows your answer sheets by name.</span></li>
+        <li><span class="k">c.</span><span>Practitioners who argue and prosecute — the law taught as it is used.</span></li>
+        <li><span class="k">d.</span><span>Continuity of faculty across the whole programme, not a rotating panel.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONS / TESTIMONIALS ============ -->
+<section class="opinions band" id="opinions">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 6 — On the Record</span>
+      <h2 class="sec-title">In their words</h2>
+      <span class="sec-aside">Selected students</span>
+    </div>
+    <div class="op-grid">
+      <div class="op reveal">
+        <blockquote>The test series is the whole game. By the prelims I had written the paper so many times that the real one felt routine.</blockquote>
+        <cite><b>Priya — RJS, selected</b>Jaipur cohort</cite>
+      </div>
+      <div class="op reveal">
+        <blockquote>I joined online from another state and never felt outside the room. The doubt sittings were one-to-one, exactly as promised.</blockquote>
+        <cite><b>Aman — APO, selected</b>Hybrid cohort</cite>
+      </div>
+      <div class="op reveal">
+        <blockquote>The viva practice changed my interview. The mock board asked harder questions than the panel did.</blockquote>
+        <cite><b>Neha — RJS, selected</b>Weekend cohort</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTRY / RESOURCES ============ -->
+<section class="registry band" id="registry">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">§ 7 — From the Registry</span>
+      <h2 class="sec-title">Free resources</h2>
+      <span class="sec-aside">Open to all</span>
+    </div>
+    <div class="reg-grid">
+      <a class="reg-card reveal" href="#contact">
+        <span class="reg-kind">PDF · Syllabus</span>
+        <h3>RJS Syllabus 2025</h3>
+        <p>The full Rajasthan Judicial Services syllabus, subject by subject, ready to print.</p>
+        <span class="go">Download →</span>
+      </a>
+      <a class="reg-card reveal" href="#contact">
+        <span class="reg-kind">Archive · Papers</span>
+        <h3>Previous Years' Questions</h3>
+        <p>Past papers across RJS and APO, the surest map of what the board actually asks.</p>
+        <span class="go">Open the archive →</span>
+      </a>
+      <a class="reg-card reveal" href="#contact">
+        <span class="reg-kind">Video · Talks</span>
+        <h3>Toppers' Talks</h3>
+        <p>Selected candidates on how they read, revised and wrote — in their own words.</p>
+        <span class="go">Watch →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER / NAMEPLATE ============ -->
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="reveal">
+        <h2>Sit the next <em>cohort.</em></h2>
+        <p class="lede">The next batch begins 20 January. Call or write, and we will walk you through the course that fits your exam and your start date.</p>
+        <a class="btn btn-solid" href="tel:+917976734810">Call +91 79767 34810</a>
+      </div>
+      <div class="foot-col reveal">
+        <h4>Reach us</h4>
+        <a href="tel:+917976734810">+91 79767 34810</a>
+        <a href="tel:+918290240085">+91 82902 40085</a>
+        <a href="mailto:abhyuthanlawacademy@gmail.com">abhyuthanlawacademy@gmail.com</a>
+        <p>New batch · 20 January</p>
+      </div>
+      <div class="foot-col reveal">
+        <h4>The classroom</h4>
+        <p>Plot No. 6, Gopalpura Bypass Rd,<br>near Triveni Puliya, Gopal Nagar-A,<br>Agrasen Nagar, Jaipur,<br>Rajasthan 302018</p>
+        <a href="https://maps.google.com/?q=Abhyuthan+Law+Academy+Gopalpura+Jaipur" target="_blank" rel="noopener">View on map →</a>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span class="mono">© 2026 Abhyuthan Law Academy · Best Judiciary Coaching in Jaipur</span>
+      <nav class="socials" aria-label="Social media">
+        <a href="#">YouTube</a><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">LinkedIn</a><a href="#">Play Store</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  menuBtn&&menuBtn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open);
+  });
+  nav&&nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded',false);}});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  // scroll reveal
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // count-up
+  function countUp(el){
+    var target=+el.getAttribute('data-count'),suffix=el.getAttribute('data-suffix')||'',
+        dur=1100,start=null;
+    if(reduce){el.textContent=target.toLocaleString('en-IN')+suffix;return;}
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1),ease=1-Math.pow(1-p,3),
+          val=Math.round(target*ease);
+      el.textContent=val.toLocaleString('en-IN')+suffix;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var co=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){countUp(en.target);co.unobserve(en.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
+</script>
+</body>
+</html>
