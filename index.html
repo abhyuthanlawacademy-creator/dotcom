@@ -156,6 +156,24 @@
   .states{display:flex;flex-wrap:wrap;gap:.5rem}
   .state{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--brass);padding-bottom:2px}
 
+  /* ---- toppers' wall ---- */
+  .toppers-wall{margin-top:clamp(2.6rem,6vw,4.5rem);padding-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--rule)}
+  .tw-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem}
+  .tw-head .mono{color:var(--brass)!important}
+  .tw-cap{margin:0;font-style:italic;font-weight:300;color:var(--ink-soft);font-size:clamp(1rem,.9rem + .4vw,1.18rem);max-width:46ch}
+  .tw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:clamp(.9rem,2vw,1.4rem)}
+  .tw-card{margin:0;background:var(--parchment-lt);border:1px solid var(--rule);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .tw-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(22,36,63,.14);border-color:var(--brass)}
+  .tw-portrait{aspect-ratio:4/5;background:linear-gradient(158deg,var(--oxblood),var(--oxblood-deep));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .tw-portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 85% at 50% -15%,rgba(196,154,74,.22),transparent 62%);pointer-events:none}
+  .tw-portrait::before{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--brass-hi);opacity:.85}
+  .tw-mono{font-family:var(--display);font-weight:500;font-size:2.4rem;letter-spacing:.03em;color:var(--brass-hi);opacity:.92}
+  .tw-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tw-body{padding:.85rem .95rem 1.05rem}
+  .tw-name{font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.1;margin:0 0 .35rem;letter-spacing:-.01em}
+  .tw-rank{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin:0;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+  .tw-rank b{color:var(--oxblood);font-weight:700;white-space:nowrap}
+
   /* ---- bench / faculty ---- */
   .bench{background:var(--parchment-lt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .bench-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
@@ -407,6 +425,54 @@
           <span class="state">Delhi</span><span class="state">Madhya Pradesh</span><span class="state">Bihar</span>
           <span class="state">Uttar Pradesh</span><span class="state">Uttarakhand</span>
         </div>
+      </div>
+    </div>
+
+    <!-- ============ TOPPERS' WALL ============
+         TO ADD A REAL PHOTO: inside a .tw-portrait, replace
+           <span class="tw-mono">PS</span>
+         with
+           <img class="tw-img" src="images/toppers/priyanka.jpg" alt="Priyanka Sharma, RJS 2024 Rank 7">
+         Use portrait-orientation images (4:5) for a clean fit.
+         Drop the files in the images/toppers/ folder. -->
+    <div class="toppers-wall reveal">
+      <div class="tw-head">
+        <span class="mono">§ 4.1 — Toppers' Wall</span>
+        <p class="tw-cap">The faces behind the number — a selection of recent results across RJS and APO.</p>
+      </div>
+      <div class="tw-grid">
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">PS</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Priyanka Sharma</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 7</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">AV</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Aman Verma</p><p class="tw-rank"><span>APO 2024</span><b>Rank 3</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">RM</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Rahul Meena</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 14</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">SJ</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Sneha Joshi</p><p class="tw-rank"><span>APO 2023</span><b>Rank 9</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">VS</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Vikram Singh</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 31</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">NG</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Neha Gupta</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 21</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">KY</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Karan Yadav</p><p class="tw-rank"><span>RJS 2023</span><b>Rank 18</b></p></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <div class="tw-portrait"><span class="tw-mono">DR</span></div>
+          <figcaption class="tw-body"><p class="tw-name">Divya Rathore</p><p class="tw-rank"><span>RJS 2024</span><b>Rank 25</b></p></figcaption>
+        </figure>
       </div>
     </div>
   </div>
