@@ -6,7 +6,6 @@
 <title>Abhyuthan Law Academy — Judicial Services Coaching, India</title>
 <meta name="description" content="Abhyuthan Law Academy, Premier coaching for RJS, APO and the judicial services of Rajasthan and beyond. Hybrid classes, a faculty of practitioners, and a full test series.">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#16243F">
@@ -64,15 +63,13 @@
   .sec-title{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,1.4rem + 2.4vw,3.1rem);line-height:1.05;letter-spacing:-.02em;margin:0;flex:1 1 320px}
   .sec-aside{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right}
 
-  /* ---- court seal mark ---- */
-  .seal{width:34px;height:34px;flex:none}
-  .seal circle,.seal line,.seal path{stroke:currentColor;fill:none;stroke-width:1.4;vector-effect:non-scaling-stroke}
+  /* ---- brand logo mark ---- */
+  .brand-logo{height:40px;width:auto;flex:none;display:block}
 
   /* ---- topbar ---- */
   .topbar{position:sticky;top:0;z-index:60;background:var(--oxblood);color:var(--parchment-hi);border-bottom:1px solid rgba(199,154,74,.4)}
   .topbar .wrap{display:flex;align-items:center;gap:1.4rem;min-height:64px}
   .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit;flex:none}
-  .brand .seal{color:var(--brass-hi)}
   .brand b{font-family:var(--display);font-weight:500;font-size:1.18rem;letter-spacing:.01em;line-height:1}
   .brand small{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-hi);margin-top:3px}
   .nav{display:flex;gap:1.6rem;margin-left:auto;align-items:center}
@@ -223,6 +220,7 @@
 
   /* ---- footer / nameplate ---- */
   .foot{background:var(--oxblood);color:var(--parchment-hi)}
+  .foot-logo{display:block;width:clamp(230px,28vw,310px);height:auto;margin:0 0 1.5rem}
   .foot-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);padding:clamp(3.5rem,7vw,6rem) 0 clamp(2.5rem,5vw,3.5rem)}
   .foot h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,1.4rem + 3vw,3.4rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 1rem}
   .foot h2 em{font-style:italic;color:var(--brass-hi)}
@@ -271,14 +269,7 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Abhyuthan Law Academy, home">
-      <svg class="seal" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="18.5"/>
-        <line x1="20" y1="9" x2="20" y2="31"/>
-        <line x1="11" y1="13" x2="29" y2="13"/>
-        <path d="M11 13 L7 21 a4 4 0 0 0 8 0 Z"/>
-        <path d="M29 13 L25 21 a4 4 0 0 0 8 0 Z"/>
-        <line x1="15" y1="31" x2="25" y2="31"/>
-      </svg>
+      <img class="brand-logo" src="images/logo-mark.png" alt="" width="76" height="40">
       <span><b>Abhyuthan</b><small>Law Academy · India</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Primary">
@@ -639,6 +630,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="reveal">
+        <img class="foot-logo" src="images/logo.png" alt="Abhyuthan Law Academy" width="310" height="197" loading="lazy">
         <h2>Sit the next <em>cohort.</em></h2>
         <p class="lede">For next batch enquiry, call or write, and we will walk you through the course that fits your exam and your start date.</p>
         <a class="btn btn-solid" href="tel:+917976734810">Call +91 79767 34810</a>
